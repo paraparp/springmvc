@@ -38,8 +38,8 @@
         <th>FECHA NACIMIENTO</th>
         <th>LUGAR NACIMIENTO</th>
         <th>EMAIL</th>
-        <th>EDITAR</th>
-        <th>BORRA</th>
+        
+        <th>BORRAR</th>
         <th>ver jugador</th>
     </tr>
      </thead>
@@ -62,9 +62,7 @@
             <c:out value="${jugador.email}" />
         </td>
          
-        <td>
-           <a href='<c:url value="/jugadores/${jugador.idJug}/update" />'>  <i class="far fa-edit"></i></a>
-        </td>
+      
         <td>
              <a href='<c:url value="/jugadores/${jugador.idJug}/delete" />'>  <i class="fas fa-trash-alt"></i></a>
         </td>
@@ -84,18 +82,14 @@
 			<c:if test="${jugador.idJug ne 0}">
 				<sf:input path="idJug" type="hidden" />
 			</c:if>
-			<tr>
-			<tr>
-				<td>ID</td>
-				<td><c:out value="${jugador.idJug}"></c:out></td>
-			</tr>
+		
 			<tr>
 				<td>Nombre</td>
-				<td><sf:input path="nombre" type="text" /></td>
+				<td><sf:input  class="form-control" path="nombre" type="text" /></td>
 			</tr>
 			<tr>
 				<td>Puesto</td>
-				<td><sf:select path="puesto">
+				<td  ><sf:select   class="form-control" path="puesto">
 						<sf:option value="Portero" />
 						<sf:option value="Defensa" />
 						<sf:option value="Centrocampista" />
@@ -104,7 +98,7 @@
 			</tr>
 			<tr>
 				<td>Lugar Nacimiento</td>
-				<td><sf:input path="lugarNacimiento" type="text" /></td>
+				<td><sf:input class="form-control"  path="lugarNacimiento" type="text" /></td>
 			</tr>
 			<!-- 			<tr> -->
 			<!-- 				<td>Fecha Nacimiento</td> -->
@@ -112,14 +106,14 @@
 			<!-- 			</tr> -->
 			<tr>
 				<td>email</td>
-				<td><sf:input path="email" type="text" /></td>
+				<td><sf:input class="form-control" path="email" type="text" /></td>
 			</tr>
 
 			<tr>
 				<td></td>
-				<td><input
+				<td><input   class="btn btn-primary" 
 					onclick="alert('Va realizar cambios en el jugador con ID: <c:out value="${jugador.idJug}"></c:out>' )"
-					type="submit" value="Guardar cambios" /></td>
+					type="submit" value="Añadir Jugador" /></td>
 			</tr>
 		</table>
 	</sf:form>

@@ -100,15 +100,9 @@ input {
 				<td>
 				<sf:select class="form-control" path="equipo.idEq">
 						<c:forEach items="${lequipos}" var="equipo">
-					
-							<option value="${equipo.idEq}">
-							<c:out value=" ${equipo.nombre}" /></option>
-						</c:forEach>
-						
+							<sf:option value="${equipo.idEq}" label="${equipo.nombre}"/>			
+						</c:forEach>	
 				</sf:select>
-			
-
-
 				</td>
 			</tr>
 			

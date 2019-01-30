@@ -64,7 +64,7 @@ public class JugadorController {
 
 		jugadorService.saveOrUpdate(equipo, jugador);
 
-		return "redirect:/jugadores/" + equipo.getIdEq();// redireccionamos al controlador inicial getAll
+		return "redirect:/jugadores/" + jugador.getEquipo().getIdEq();// redireccionamos al controlador inicial getAll
 	}
 	
 	@RequestMapping("/jugadores/{idjug}/update")

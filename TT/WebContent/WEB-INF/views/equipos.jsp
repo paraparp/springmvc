@@ -82,27 +82,27 @@ input {
 	<div >
 	<sf:form action="${pageContext.request.contextPath}/equipos/save"
 		 method="post" modelAttribute="equipo">
-		<table  width="50%" border="0" align="center">
+		<table  width="30%" border="0" align="center">
 
 			<c:if test="${equipo.idEq ne 0}">
-				<sf:input path="idEq" type="hidden"/>
+				<sf:input class="form-control" path="idEq" type="hidden"/>
 			
 			</c:if>
 			<tr>
 				<td>Nombre</td>
-				<td><sf:input path="nombre" type="text" /></td>
+				<td><sf:input class="form-control" path="nombre" type="text" /></td>
 			</tr>
 			<tr>
 				<td>Division</td>
-				<td><sf:input path="division" type="text" /></td>
+				<td><sf:input class="form-control" path="division" type="text" /></td>
 			</tr>
 			<tr>
 				<td></td>
-				<td><input type="submit" value="Guardar cambios" /></td>
+				<td><input class="btn btn-primary"type="submit" value="Guardar cambios" /></td>
 			</tr>
 		</table>
 	</sf:form>
 </div>
-	<a href='<c:url value= "/" />'>INDEX</a>
+	
 </body>
 </html>
